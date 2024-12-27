@@ -1,0 +1,7 @@
+# JazzFeatConfig jazz_feat_cfg.proto
+frame_size : 480
+frame_step : 320
+win : 5
+skip_frame : 0
+cache_size : 1
+num_fbank : 40

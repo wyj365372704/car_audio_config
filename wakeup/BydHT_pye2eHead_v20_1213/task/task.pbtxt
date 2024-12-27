@@ -1,0 +1,3 @@
+# JazzTaskConfig jazz_task_cfg.proto
+type : KWS
+value : "./task/kws_task.bin"

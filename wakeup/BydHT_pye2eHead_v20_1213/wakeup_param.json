@@ -1,0 +1,836 @@
+[
+    {
+        "trans_name":"ht_transf.8bit.bin",
+        "net_file_name":"ht_nnet.8bit.bin",
+        "cache_size":1,
+        "trunk_num":6,
+        "base_cfg":{
+            "wstatus": 0,
+            "use_vad" : 1,
+            "use_dnn_wakeup" : 1,
+            "vad_frame_size" : 480,
+            "vad_frame_step" : 320,
+            "version" : "wkp_aicar_bydts-HT_10dialect_pye2euserdef_20241213.bin",
+            "dnn_cfg" : {
+                "score_high_index" : 65,
+                "score_low_index" : 85,
+                "thresh" : 1.5,
+                "prethresh_scale" : 0.70,
+                "score_high_weight" : 1.0,
+                "score_low_weight" : 0.7,
+                "use_progressive_smooth" : 1,
+                "expwords" : [""],
+                "similar_words" : [""],
+                "similar_words_op" : 1,
+                "use_penalty" : 0,
+                "use_duration_penalty" : 1,
+                "use_restart_easy_wakeup" : 1,
+                "use_char_check" : 1,
+                "score_false_reduce_duration" : 24000,
+                "score_false_reduce_nowakeup_duration" : 8000,
+                "score_easy_wakeup_duration" : 500,
+                "score_false_reduce_coef" : 0.85,
+                "score_easy_wakeup_coef" : 1.3,
+                "score_easy_wakeup_nowakeup_coef" : 1.1,
+                "char_score_max_win" : 20,
+                "char_score_min_win" : 1,
+                "char_score_thresh_array" : [],
+                "char_check_words" : [""],
+                "conf_win" : 3,
+                "dict" : ["sil", "a", "ai", "an", "ang", "ao", "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu", "ca", "cai", "can", "cang", "cao", "ce", "cen", "ceng", "cha", "chai", "chan", "chang", "chao", "che", "chen", "cheng", "chi", "chong", "chou", "chu", "chuai", "chuan", "chuang", "chui", "chun", "chuo", "ci", "cong", "cou", "cu", "cuan", "cui", "cun", "cuo", "da", "dai", "dan", "dang", "dao", "de", "dei", "den", "deng", "di", "dia", "dian", "diao", "die", "ding", "diu", "dong", "dou", "du", "duan", "dui", "dun", "duo", "e", "ei", "en", "er", "fa", "fan", "fang", "fei", "fen", "feng", "fo", "fou", "fu", "ga", "gai", "gan", "gang", "gao", "ge", "gei", "gen", "geng", "gong", "gou", "gu", "gua", "guai", "guan", "guang", "gui", "gun", "guo", "ha", "hai", "han", "hang", "hao", "he", "hei", "hen", "heng", "hng", "hong", "hou", "hu", "hua", "huai", "huan", "huang", "hui", "hun", "huo", "ji", "jia", "jian", "jiang", "jiao", "jie", "jin", "jing", "jiong", "jiu", "juan", "jue", "jun", "jv", "ka", "kai", "kan", "kang", "kao", "ke", "ken", "keng", "kong", "kou", "ku", "kua", "kuai", "kuan", "kuang", "kui", "kun", "kuo", "la", "lai", "lan", "lang", "lao", "le", "lei", "leng", "li", "lia", "lian", "liang", "liao", "lie", "lin", "ling", "liu", "lo", "long", "lou", "lu", "luan", "lue", "lun", "luo", "lv", "ma", "mai", "man", "mang", "mao", "me", "mei", "men", "meng", "mi", "mian", "miao", "mie", "min", "ming", "miu", "mo", "mou", "mu", "na", "nai", "nan", "nang", "nao", "ne", "nei", "nen", "neng", "ng", "ni", "nian", "niang", "niao", "nie", "nin", "ning", "niu", "nong", "nou", "nu", "nuan", "nue", "nuo", "nv", "o", "ou", "pa", "pai", "pan", "pang", "pao", "pei", "pen", "peng", "pi", "pian", "piao", "pie", "pin", "ping", "po", "pou", "pu", "qi", "qia", "qian", "qiang", "qiao", "qie", "qin", "qing", "qiong", "qiu", "quan", "que", "qun", "qv", "ran", "rang", "rao", "re", "ren", "reng", "ri", "rong", "rou", "ru", "ruan", "rui", "run", "ruo", "sa", "sai", "san", "sang", "sao", "se", "sen", "seng", "sha", "shai", "shan", "shang", "shao", "she", "shei", "shen", "sheng", "shi", "shou", "shu", "shua", "shuai", "shuan", "shuang", "shui", "shun", "shuo", "si", "song", "sou", "su", "suan", "sui", "sun", "suo", "ta", "tai", "tan", "tang", "tao", "te", "tei", "teng", "ti", "tian", "tiao", "tie", "ting", "tong", "tou", "tu", "tuan", "tui", "tun", "tuo", "wa", "wai", "wan", "wang", "wei", "wen", "weng", "wo", "wu", "xi", "xia", "xian", "xiang", "xiao", "xie", "xin", "xing", "xiong", "xiu", "xuan", "xue", "xun", "xv", "ya", "yan", "yang", "yao", "ye", "yi", "yin", "ying", "yo", "yong", "you", "yu", "yuan", "yue", "yun", "za", "zai", "zan", "zang", "zao", "ze", "zei", "zen", "zeng", "zha", "zhai", "zhan", "zhang", "zhao", "zhe", "zhei", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu", "zhua", "zhuai", "zhuan", "zhuang", "zhui", "zhun", "zhuo", "zi", "zong", "zou", "zu", "zuan", "zui", "zun", "zuo", "speech", "sei"],
+                "dict_e2e" : ["sil","speech","ni_hao_teng_shi","teng_shi_ni_hao","lei_hou_teng_sei","teng_sei_lei_hou","hai_den_ze","ni_hao_xiao_di","xiao_di_ni_hao"],
+                "use_diff_win": 1,
+                "wsmooth" : 6,
+                "wmax" : 20,
+                "wsmooth_e2e" : 14,
+                "space" : 2,
+                "max_win" : 20,
+                "doa_thresh_scale" : 10.75,
+                "use_fsmn" : 1,
+                "use_multi" : 1,
+                "out_col" : 412,
+                "e2e_branch_out_col" : 9,
+                "skip_frame" : 0,
+                "frame_size" : 480,
+                "frame_step" : 320,
+                "thresh_array" :[1.25],
+                "custom": 0
+            }
+        },
+        "custom_wakeup_config":
+        [
+            {
+                "wakeup_word":"ni hao teng shi",
+                "e2e_word":"ni_hao_teng_shi",
+
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+                "conf_win": 3,
+
+                "similar_words": ["ni nei", "shi si"],
+                "similar_words_op": 3,
+
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.35,1.35],
+                "score_false_reduce_coef_array": [0.8,0.8],
+                "wstatus":0,
+                "strategy":[
+                    {
+                        "thresh":[0.45],
+                        "e2e_thresh":[0.45],
+			            "xcheck":[0.001,0.001,0.001,0.001],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 6, "phon_thresh": 0.2},{"phon_count": 6, "phon_thresh": 0.15}]
+                    },
+                    {
+                        "thresh":[0.60],
+                        "e2e_thresh":[0.17],
+			            "xcheck":[0.001,0.001,0.001,0.001],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 6, "phon_thresh": 0.2},{"phon_count": 6, "phon_thresh": 0.15}]
+                    },
+                    {
+                        "thresh":[0.14],
+                        "e2e_thresh":[0.76],
+			            "xcheck":[0.001,0.001,0.001,0.001]
+                    },
+                    {
+                        "thresh":[0.30],
+                        "e2e_thresh":[0.35],
+                        "mfiller":[-0.3,-0.3,-0.3,-0.3],
+                        "fast_speed_thresh": 100
+                    }
+                ]
+            }, 
+            {
+                "wakeup_word":"teng shi ni hao",
+                "e2e_word":"teng_shi_ni_hao",
+
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+
+                "similar_words": ["ni lei", "shi si san"],
+                "similar_words_op": 3,
+
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.35,1.35],
+                "score_false_reduce_coef_array": [0.8,0.8],
+
+                "wstatus":0,
+                "strategy":[
+                    {
+                        "thresh":[0.45],
+                        "e2e_thresh":[0.43],
+			            "xcheck": [0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 6, "phon_thresh": 0.2},{"phon_count": 4, "phon_thresh": 0.3}]
+                    },
+                    {
+                        "thresh":[0.59],
+                        "e2e_thresh":[0.14],
+			            "xcheck": [0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 6, "phon_thresh": 0.2},{"phon_count": 4, "phon_thresh": 0.3}]
+                    },
+                    {
+                        "thresh":[0.15],
+                        "e2e_thresh":[0.80],
+			            "xcheck": [0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"lei hou teng sei",
+                "e2e_word":"lei_hou_teng_sei",
+
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[15,15,15,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+    
+                "similar_words": ["lei nei ni", "hou hao", "sei zei", "ma speech"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.35,1.35],
+                "score_false_reduce_coef_array": [0.7,0.7],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.20],
+                        "e2e_thresh":[0.20],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.2},{"phon_count": 6, "phon_thresh": 0.12},{"phon_count": 4, "phon_thresh": 0.2}]
+                    },
+                    {
+                        "thresh":[0.33],
+                        "e2e_thresh":[0.15],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    },
+                    {
+                        "thresh":[0.14],
+                        "e2e_thresh":[0.32],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"teng sei lei hou",
+                "e2e_word":"teng_sei_lei_hou",
+
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[16,18,16,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+    
+                "similar_words": ["lei nei ni", "hou hao", "sei zei"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.35,1.35],
+                "score_false_reduce_coef_array": [0.7,0.7],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.22],
+                        "e2e_thresh":[0.24],
+                        "xcheck":[0.001,0.02,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 7, "phon_thresh": 0.1},{"phon_count": 4, "phon_thresh": 0.3}]
+                    },
+                    {
+                        "thresh":[0.30],
+                        "e2e_thresh":[0.12],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 4, "phon_thresh": 0.3},{"phon_count": 7, "phon_thresh": 0.1},{"phon_count": 4, "phon_thresh": 0.3}]
+                    },
+                    {
+                        "thresh":[0.12],
+                        "e2e_thresh":[0.32],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao xiao di",
+                "e2e_word":"ni_hao_xiao_di",
+    
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[16,20,16,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.3,1.3],
+                "score_false_reduce_coef_array": [0.85,0.85],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.30],
+                        "e2e_thresh":[0.28],
+                        "xcheck":[0.001,0.05,0.001,0.05],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 6, "phon_thresh": 0.15},{"phon_count": 7, "phon_thresh": 0.15},{"phon_count": 6, "phon_thresh": 0.15}]
+                    },
+                    {
+                        "thresh":[0.48],
+                        "e2e_thresh":[0.14],
+                        "xcheck":[0.001,0.001,0.001,0.001]
+                    },
+                    {
+                        "thresh":[0.14],
+                        "e2e_thresh":[0.53],
+                        "xcheck":[0.001,0.001,0.001,0.001]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"xiao di ni hao",
+                "e2e_word":"xiao_di_ni_hao",
+    
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[18,20,18,0],
+                "word_space_array":[2,2,2,0],
+                "word_wsmooth_e2e_array": [14],
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1,1.1],
+                "score_easy_wakeup_coef_array": [1.3,1.3],
+                "score_false_reduce_coef_array": [0.85,0.85],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.25],
+                        "e2e_thresh":[0.25],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 6, "phon_thresh": 0.3},{"phon_count": 8, "phon_thresh": 0.2},{"phon_count": 6, "phon_thresh": 0.15}]
+                    },
+                    {
+                        "thresh":[0.38],
+                        "e2e_thresh":[0.12],
+                        "xcheck":[0.001,0.001,0.001,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    },
+                    {
+                        "thresh":[0.14],
+                        "e2e_thresh":[0.55],
+                        "xcheck":[0.001,0.001,0.02,0.001],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"nong hao deng si",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+    
+                "similar_words":["hao hou", "si zi shi", "deng teng", "nong dong"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.8],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.5],
+                        "xcheck":[0.05,0.15,0.15,0.2],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"deng si nong hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+    
+                "similar_words":["hao hou", "si zi shi", "deng teng", "nong dong"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.8],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.5],
+                        "xcheck":[0.15,0.3,0.05,0.15],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"yi hao teng shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+    
+                "similar_words":["hao hou", "shi si"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.8],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.58],
+                        "xcheck":[0.15,0.15,0.15,0.1],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"teng shi yi hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+    
+                "similar_words":["hao hou", "shi si"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.8],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.5],
+                        "xcheck":[0.15,0.3,0.15,0.15],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"niao teng shi",
+                "word_smooth_array":[6,6,6],
+                "word_max_array":[15,15,0],
+                "word_space_array":[1,1,0],
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.65],
+                        "xcheck":[0.3,0.4,0.3],
+                        "mfiller":[-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 5, "phon_thresh": 0.3},{"phon_count": 5, "phon_thresh": 0.3}]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"niao leng shi",
+                "word_smooth_array":[6,6,6],
+                "word_max_array":[15,15,0],
+                "word_space_array":[1,1,0],
+    
+                "similar_words":["leng le neng"],
+                "similar_words_op": 2,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.70],
+                        "xcheck":[0.3,0.4,0.3],
+                        "mfiller":[-1.0,-1.0,-1.0],
+                        "addCheck": [{"phon_count": 3, "phon_thresh": 0.3},{"phon_count": 3, "phon_thresh": 0.3}]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni yao leng shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+    
+                "similar_words":["yao hao","leng le"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":0,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.57],
+                        "xcheck":[0.15,0.25,0.60,0.25],
+                        "mfiller":[-1.0,-1.0,-1.0,-1.0]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao sha di",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["sha ya"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.55],
+                        "xcheck":[0.5,0.5,0.2,0.15]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"sha di ni hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["sha ya"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.70],
+                        "xcheck":[0.2,0.5,0.5,0.35]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao chun shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["chun zhun"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.75],
+                        "xcheck":[0.5,0.5,0.4,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ran hou teng shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["shi si", "hou hao"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.55],
+                        "xcheck":[0.4,0.3,0.3,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ran hou teng san",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["hou hao"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.25],
+                        "xcheck":[0.15,0.3,0.2,0.1]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ta jiao teng shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["ta kan", "jiao tiao jiu"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.30],
+                        "xcheck":[0.1,0.05,0.6,0.6]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao ma sei",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["hao hou"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.25],
+                        "xcheck":[0.1,0.2,0.1,0.6]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao san si",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["ni lei", "si shi"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.65],
+                        "xcheck":[0.1,0.1,0.4,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni jiu teng shi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["ni lei", "hao hou"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.35],
+                        "xcheck":[0.2,0.1,0.6,0.6]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"ni hao xiao yi",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["hao hou", "yi pi wen bi"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.5],
+                        "xcheck":[0.2,0.3,0.2,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"xiao yi ni hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["hao hou", "yi pi", "ni speech"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.55],
+                        "xcheck":[0.2,0.2,0.2,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"tong xue ni hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+
+                "similar_words":["tong teng", "xue shuo"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.45],
+                        "xcheck":[0.2,0.2,0.2,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"dan shi ni hao",
+                "word_smooth_array":[6,6,6,6],
+                "word_max_array":[20,20,20,0],
+                "word_space_array":[2,2,2,0],
+                
+                "similar_words":["hao hou"],
+                "similar_words_op": 3,
+    
+                "score_easy_wakeup_nowakeup_coef_array": [1.1],
+                "score_easy_wakeup_coef_array": [1.3],
+                "score_false_reduce_coef_array": [0.85],
+    
+                "wstatus":2,
+                "custom": 0,
+                "reset_all_channel": 0,
+                "strategy":[
+                    {
+                        "thresh":[0.55],
+                        "xcheck":[0.35,0.5,0.3,0.3]
+                    }
+                ]
+            },
+            {
+                "wakeup_word":"teng shi",
+                "wstatus": 0,
+                "subword_wakeup":1,
+                "strategy":[
+                    {
+                        "thresh":[0.75]
+                    }
+                ]
+
+            },
+            {
+                "wakeup_word":"teng sei",
+                "wstatus": 0,
+                "subword_wakeup":1,
+                "strategy":[
+                    {
+                        "thresh":[0.75]
+                    }
+                ]
+
+            },
+            {
+                "wakeup_word":"xiao di",
+                "wstatus": 0,
+                "subword_wakeup":1,
+                "strategy":[
+                    {
+                        "thresh":[0.70]
+                    }
+                ]
+
+            }
+        ]
+    },
+    {
+        "trans_name":"custom_transf.8bit.bin",
+        "net_file_name":"custom_nnet.8bit.bin",
+        "cache_size":1,
+        "base_cfg":{
+            "wstatus": 0,
+            "use_vad" : 1,
+            "use_dnn_wakeup" : 1,
+            "vad_frame_size" : 480,
+            "vad_frame_step" : 320,
+            "version" : "wkp_aicar_py.bin",
+            "dnn_cfg" : {
+                "wsmooth" : 5,
+                "wmax" : 15,
+                "space" : 3,
+                "score_high_index" : 65,
+                "score_low_index" : 85,
+                "thresh" : 1.5,
+                "prethresh_scale" : 0.75,
+                "score_high_weight" : 1.0,
+                "score_low_weight" : 0.7,
+                "use_progressive_smooth" : 1,
+                "expwords" : [""],
+                "use_penalty" : 0,
+                "use_duration_penalty" : 1,
+                "use_char_check" : 1,
+                "char_score_max_win" : 23,
+                "char_score_min_win" : 5,
+                "char_score_thresh_array" : [],
+                "char_check_words" : [""],
+                "score_false_reduce_duration" : 21000,
+                "score_false_reduce_nowakeup_duration" : 3000,
+                "score_easy_wakeup_duration" : 500,
+                "score_false_reduce_coef" : 0.9,
+                "score_easy_wakeup_coef" : 1.3,
+                "score_easy_wakeup_nowakeup_coef" : 1.3,
+                "dict" : ["sil", "a", "ai", "an", "ang", "ao", "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu", "ca", "cai", "can", "cang", "cao", "ce", "cen", "ceng", "cha", "chai", "chan", "chang", "chao", "che", "chen", "cheng", "chi", "chong", "chou", "chu", "chuai", "chuan", "chuang", "chui", "chun", "chuo", "ci", "cong", "cou", "cu", "cuan", "cui", "cun", "cuo", "da", "dai", "dan", "dang", "dao", "de", "dei", "den", "deng", "di", "dia", "dian", "diao", "die", "ding", "diu", "dong", "dou", "du", "duan", "dui", "dun", "duo", "e", "ei", "en", "er", "fa", "fan", "fang", "fei", "fen", "feng", "fo", "fou", "fu", "ga", "gai", "gan", "gang", "gao", "ge", "gei", "gen", "geng", "gong", "gou", "gu", "gua", "guai", "guan", "guang", "gui", "gun", "guo", "ha", "hai", "han", "hang", "hao", "he", "hei", "hen", "heng", "hng", "hong", "hou", "hu", "hua", "huai", "huan", "huang", "hui", "hun", "huo", "ji", "jia", "jian", "jiang", "jiao", "jie", "jin", "jing", "jiong", "jiu", "juan", "jue", "jun", "jv", "ka", "kai", "kan", "kang", "kao", "ke", "ken", "keng", "kong", "kou", "ku", "kua", "kuai", "kuan", "kuang", "kui", "kun", "kuo", "la", "lai", "lan", "lang", "lao", "le", "lei", "leng", "li", "lia", "lian", "liang", "liao", "lie", "lin", "ling", "liu", "lo", "long", "lou", "lu", "luan", "lue", "lun", "luo", "lv", "ma", "mai", "man", "mang", "mao", "me", "mei", "men", "meng", "mi", "mian", "miao", "mie", "min", "ming", "miu", "mo", "mou", "mu", "na", "nai", "nan", "nang", "nao", "ne", "nei", "nen", "neng", "ng", "ni", "nian", "niang", "niao", "nie", "nin", "ning", "niu", "nong", "nou", "nu", "nuan", "nue", "nuo", "nv", "o", "ou", "pa", "pai", "pan", "pang", "pao", "pei", "pen", "peng", "pi", "pian", "piao", "pie", "pin", "ping", "po", "pou", "pu", "qi", "qia", "qian", "qiang", "qiao", "qie", "qin", "qing", "qiong", "qiu", "quan", "que", "qun", "qv", "ran", "rang", "rao", "re", "ren", "reng", "ri", "rong", "rou", "ru", "ruan", "rui", "run", "ruo", "sa", "sai", "san", "sang", "sao", "se", "sen", "seng", "sha", "shai", "shan", "shang", "shao", "she", "shei", "shen", "sheng", "shi", "shou", "shu", "shua", "shuai", "shuan", "shuang", "shui", "shun", "shuo", "si", "song", "sou", "su", "suan", "sui", "sun", "suo", "ta", "tai", "tan", "tang", "tao", "te", "tei", "teng", "ti", "tian", "tiao", "tie", "ting", "tong", "tou", "tu", "tuan", "tui", "tun", "tuo", "wa", "wai", "wan", "wang", "wei", "wen", "weng", "wo", "wu", "xi", "xia", "xian", "xiang", "xiao", "xie", "xin", "xing", "xiong", "xiu", "xuan", "xue", "xun", "xv", "ya", "yan", "yang", "yao", "ye", "yi", "yin", "ying", "yo", "yong", "you", "yu", "yuan", "yue", "yun", "za", "zai", "zan", "zang", "zao", "ze", "zei", "zen", "zeng", "zha", "zhai", "zhan", "zhang", "zhao", "zhe", "zhei", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu", "zhua", "zhuai", "zhuan", "zhuang", "zhui", "zhun", "zhuo", "zi", "zong", "zou", "zu", "zuan", "zui", "zun", "zuo", "speech"],
+                "similar_words" : [],
+                "similar_words_op" : 1,
+                "doa_thresh_scale" : 0.85,
+                "use_fsmn" : 1,
+                "out_col" : 411,
+                "skip_frame" : 0,
+                "frame_size" : 480,
+                "frame_step" : 320,
+                "thresh_array" :[1.25],
+                "custom":2
+            }
+        }
+    }
+]

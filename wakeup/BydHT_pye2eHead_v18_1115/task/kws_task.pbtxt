@@ -1,0 +1,57 @@
+# JazzTaskKwsConfig jazz_task_kws_cfg.proto
+cfg {
+	cfg {
+		use_vad : 1
+		vad_feature {
+			type : FEATURE
+			alg_type :  1
+			value : "./major/vad/feature.bin"
+		}
+		vad_nn {
+			type : NN
+			alg_type :  5
+			value : "./major/vad/nn.bin"
+		}
+		vad {
+			type : VAD
+			alg_type :  0
+			value : "./major/vad/vad.bin"
+		}
+		use_custom : 1
+		kws_feature {
+			type : FEATURE
+			alg_type :  1
+			value : "./major/kws/feature.bin"
+		}
+		kws_nn : [
+		{
+			type : NN
+			alg_type :  5
+			value : "./major/kws/nn0.bin"
+		},
+		{
+			type : NN
+			alg_type :  5
+			value : "./major/kws/nn1.bin"
+		}
+		]
+		kws : [
+		{
+			type : KWS
+			alg_type :  1
+			value : "./major/kws/kws0.bin"
+		},
+		{
+			type : KWS
+			alg_type :  1
+			value : "./major/kws/kws1.bin"
+		}
+		]
+		kws_cmn {
+			type : CMN
+			alg_type :  0
+			value : "./major/kws/cmn.bin"
+		}
+	rand_noise_range : 5
+	}
+}

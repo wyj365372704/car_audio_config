@@ -1,0 +1,6 @@
+# JazzFSMNWTKConfig jazz_fsmn_wtk_cfg.proto
+trans_fn : "./major/res/ht_transf.8bit.bin"
+nnet_fn : "./major/res/ht_nnet.8bit.bin"
+use_multi : 1
+cache_size : 1
+trunk_num : 6
